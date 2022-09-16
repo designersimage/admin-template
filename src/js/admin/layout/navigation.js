@@ -12,7 +12,9 @@ export const navigation = () => {
         viewport = window.innerWidth
     })
 
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        
         if (viewport < 1024) {
             if (adminNav.classList.contains('open') || adminNav.classList.contains('closed')) {
                 // Toggle Open and Closed class
