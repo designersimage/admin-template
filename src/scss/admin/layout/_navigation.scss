@@ -1,0 +1,431 @@
+/*
+|--------------------------------------------------
+| Designer's Image Admin Layout -- Navigation
+|--------------------------------------------------
+*/
+
+nav.admin-nav {
+    background-color: var(--color-white);
+    height: calc(100vh - 5rem);
+    left: 0;
+    position: absolute;
+    top: 5rem;
+    transition: all 300ms ease;
+    width: 4.5rem;
+    z-index: 8;
+
+    section {
+        align-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-items: flex-end;
+        max-height: calc(100vh - 5rem);
+        width: 100%;
+
+        a h3 {
+            display: none;
+            transition: all 300ms ease;
+        }
+
+        a span.message-count {
+            background-color: var(--color-danger);
+            border-radius: $border-radius-1;
+            color: var(--color-white);
+            font-size: 0;
+            margin: 0 0 -1rem -1.6rem;
+            padding: .4rem;
+        }
+
+        .menu-control {
+            align-items: center;
+            justify-content: flex-end;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            width: 100%;
+
+            a.open-menu {
+                display: none;
+            }
+            a.close-menu {
+                display: flex;
+                span {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+
+    &.open {
+        width: 100%;
+        section {
+            a h3 {
+                display: block;
+            }
+
+            a span.message-count {
+                background-color: var(--color-danger);
+                border-radius: $border-radius-1;
+                color: var(--color-white);
+                font-size: 1rem;
+                margin: unset;
+                padding: .4rem 1rem;
+            }
+
+            .menu-control {
+                a.open-menu {
+                    display: flex;
+                }
+                a.close-menu {
+                    display: none;
+                }
+            }
+        } 
+    }
+
+    &.closed {
+        width: 4.5rem;
+
+        section {
+            a h3 {
+                display: none;
+            }
+
+            a span.message-count {
+                background-color: var(--color-danger);
+                border-radius: $border-radius-1;
+                color: var(--color-white);
+                font-size: 0;
+                margin: 0 0 -1rem -1.8rem;
+                padding: .4rem;
+            }
+
+            .menu-control {
+                a.open-menu {
+                    display: none;
+                }
+                a.close-menu {
+                    display: flex;
+                }
+            }
+
+        }
+
+    }
+    
+}
+
+@media screen and (min-width: 360px) {
+    nav.admin-nav {
+        height: calc(100vh - 6.3rem);
+        top: 6.3rem;
+        width: 5.2rem;
+
+        section {
+            a span.message-count {
+                margin: 0 0 -1.2rem -1.7rem;
+                padding: .4rem;
+            }
+        }
+
+        &.open {
+            width: 22rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav.admin-nav {
+        background-color: var(--color-white);
+        height: calc(100vh - 7.4rem);
+        left: 0;
+        position: absolute;
+        top: 7.4rem;
+        width: 6rem;
+    
+        section {
+            align-content: flex-start;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-items: flex-end;
+            max-height: calc(100vh - 6.3rem);
+            width: 100%;
+    
+            a h3 {
+                display: none;
+            }
+    
+            a span.message-count {
+                background-color: var(--color-danger);
+                border-radius: $border-radius-1;
+                color: var(--color-white);
+                font-size: 0;
+                margin: 0 0 -1.6rem -2.4rem;
+                padding: .55rem;
+            }
+    
+            .menu-control {
+                align-items: center;
+                justify-content: flex-end;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                width: 100%;
+    
+                a.open-menu {
+                    display: none;
+                }
+                a.close-menu {
+                    display: flex;
+                }
+            }
+        }
+    
+        &.open {
+            width: 28rem;
+            section {
+                a h3 {
+                    display: block;
+                    font-size: 1.8rem;
+                }
+    
+                a span.message-count {
+                    background-color: var(--color-danger);
+                    border-radius: $border-radius-1;
+                    color: var(--color-white);
+                    font-size: 1.2rem;
+                    margin: unset;
+                    padding: .4rem 1rem;
+                }
+    
+                .menu-control {
+                    a.open-menu {
+                        display: flex;
+                    }
+                    a.close-menu {
+                        display: none;
+                    }
+                }
+            } 
+        }
+    
+        &.closed {
+            width: 6rem;
+    
+            section {
+                a h3 {
+                    display: none;
+                }
+    
+                a span.message-count {
+                    background-color: var(--color-danger);
+                    border-radius: $border-radius-1;
+                    color: var(--color-white);
+                    font-size: 0;
+                    margin: 0 0 -1.6rem -2.4rem;
+                    padding: .55rem;
+                }
+    
+                .menu-control {
+                    a.open-menu {
+                        display: none;
+                    }
+                    a.close-menu {
+                        display: flex;
+                    }
+                }
+    
+            }
+    
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav.admin-nav {
+        align-self: stretch;
+        background-color: var(--color-white);
+        flex: 0 22rem;
+        height: calc(100vh - 7.4rem);
+        left: 0;
+        position: unset;
+        width: 22rem;
+    
+        section {
+            align-content: flex-start;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-items: flex-end;
+            max-height: calc(100vh - 6.3rem);
+            width: 100%;
+    
+            a span.message-count {
+                background-color: var(--color-danger);
+                border-radius: $border-radius-1;
+                color: var(--color-white);
+                font-size: 1rem;
+                margin: 0;
+                padding: .4rem 1rem;
+            }
+
+            a h3 {
+                display: block;
+            }
+    
+            .menu-control {
+                align-items: center;
+                justify-content: flex-end;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                width: 100%;
+    
+                a.open-menu {
+                    display: flex;
+                }
+                a.close-menu {
+                    display: none;
+                }
+            }
+        }
+    
+        &.open {
+            flex: 0 22rem;
+            section {
+                a h3 {
+                    display: block;
+                }
+    
+                a span.message-count {
+                    background-color: var(--color-danger);
+                    border-radius: $border-radius-1;
+                    color: var(--color-white);
+                    font-size: 1rem;
+                    margin: unset;
+                    padding: .4rem 1rem;
+                }
+    
+                .menu-control {
+                    a.open-menu {
+                        display: flex;
+                    }
+                    a.close-menu {
+                        display: none;
+                    }
+                }
+            } 
+        }
+    
+        &.closed {
+            flex: 0 4.5rem;
+            section {
+                a h3 {
+                    display: none;
+                }
+    
+                a span.message-count {
+                    background-color: var(--color-danger);
+                    border-radius: $border-radius-1;
+                    color: var(--color-white);
+                    font-size: 0;
+                    margin: 0 0 -1rem -1.8rem;
+                    padding: .4rem;
+                }
+    
+                .menu-control {
+                    a.open-menu {
+                        display: none;
+                    }
+                    a.close-menu {
+                        display: flex;
+                    }
+                }
+    
+            }
+            
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    nav.admin-nav {
+        flex: 0 22rem;
+        height: calc(100vh - 5rem);
+        left: 0;
+        position: unset;
+        width: 22rem;
+    
+        section {
+            align-content: flex-start;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-items: flex-end;
+            max-height: calc(100vh - 5rem);
+            width: 100%;
+    
+            a span.message-count {
+                background-color: var(--color-danger);
+                border-radius: $border-radius-1;
+                color: var(--color-white);
+                font-size: 1rem;
+                margin: 0;
+                padding: .4rem 1rem;
+            }
+
+            a h3 {
+                display: block;
+            }
+    
+            .menu-control {
+                align-items: center;
+                justify-content: flex-end;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                width: 100%;
+    
+                a.open-menu {
+                    display: flex;
+                }
+                a.close-menu {
+                    display: none;
+                }
+            }
+        }
+    
+        &.open {
+            flex: 0 22rem;
+            section {
+                a h3 {
+                    display: block;
+                    font-size: 1.4rem;
+                }
+    
+                a span.message-count {
+                    background-color: var(--color-danger);
+                    border-radius: $border-radius-1;
+                    color: var(--color-white);
+                    font-size: 1rem;
+                    margin: unset;
+                    padding: .4rem 1rem;
+                }
+    
+                .menu-control {
+                    a.open-menu {
+                        display: flex;
+                    }
+                    a.close-menu {
+                        display: none;
+                    }
+                }
+            } 
+        }
+        
+    }
+}

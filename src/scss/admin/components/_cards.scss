@@ -1,0 +1,310 @@
+/*
+|--------------------------------------------------
+| Designer's Image Admin Components -- Cards
+|--------------------------------------------------
+*/
+
+.card-insight {
+    background-color: var(--color-white);
+    border-radius: $card-border-radius;
+    box-shadow: $box-shadow;
+    flex: 1 1 25rem;
+    padding: $card-padding;
+    transition: all 300ms ease;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    > span {
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        color: var(--color-white);
+        font-size: 2rem;
+        padding: 0.8rem;
+    }
+
+    .container {
+        align-items: center;
+        display: flex;
+        gap: 1.4rem;
+        justify-content: space-between;
+
+        .info h3 {
+            font-weight: 600;
+        }
+
+        .info h1 {
+            margin-bottom: 1rem;
+        }
+
+        .graph {
+            border-radius: 50%;
+            height: 6.2rem;
+            position: relative;
+            width: 6.2rem;
+
+            .circle {
+                background-color: var(--color-white);
+                border: solid 10px var(--color-primary);
+                border-radius: 50%;
+                height: 6.2rem;
+                width: 6.2rem;
+            }
+
+            .number {
+                align-items: center;
+                display: flex;
+                inset: 0;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        > span {
+            background-color: var(--color-danger);
+        }
+    }
+
+    &:nth-child(3) {
+        > span {
+            background-color: var(--color-success);
+        }
+    }
+
+}
+
+@media screen and (min-width: 540px) {
+    
+    .card-insight {
+        align-items: flex-start;
+        column-gap: 1.4rem;
+        display: flex;
+        flex: 1 1 25rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin: 1rem auto;
+    
+        > span {
+            font-size: 2.4rem;
+            padding: 0.8rem;
+        }
+    
+        .container {
+            align-items: center;
+            flex: 1;
+            gap: 1.4rem;
+            justify-content: space-between;
+    
+            .graph {
+                height: 8.4rem;
+                width: 8.4rem;
+    
+                .circle {
+                    border: solid 12px var(--color-primary);
+                    height: 8.4rem;
+                    width: 8.4rem;
+                }
+            }
+        }
+
+        small {
+            flex: 0 calc(100% - 5.4rem);
+            margin-top: -0.6rem;
+        }
+    
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .card-insight {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-insight {
+        align-items: flex-start;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        column-gap: 1.4rem;
+        height: fit-content;
+        justify-content: flex-end;
+        margin: 1rem 0;
+        padding: $card-padding;
+        
+        > span {
+            font-size: 2.4rem;
+            height: fit-content;
+            padding: 0.8rem;
+        }
+    
+        .container {
+            align-items: flex-start;
+            display: flex;
+            flex: 1;
+            gap: 1.4rem;
+            height: fit-content;
+            justify-content: space-between;
+            padding-top: 1rem;
+
+            .info h3 {
+                margin-top: 0;
+            }
+    
+            .info h1 {
+                margin-bottom: 1rem;
+            }
+    
+            .graph {
+                height: 8.6rem;
+                width: 8.6rem;
+    
+                .circle {
+                    height: 8.6rem;
+                    width: 8.6rem;
+                }
+            }
+        }
+
+        small {
+            flex: 0 calc(100% - 5.4rem);
+            margin-top: -1.2rem;
+        }
+    
+        &:nth-child(2) {
+            .container .graph svg circle {
+                stroke-dasharray: -30;
+                stroke-dashoffset: 200;
+            }
+        }
+    
+        &:nth-child(3) {
+            .container .graph svg circle {
+                stroke-dasharray: 110;
+                stroke-dashoffset: 30;
+            }
+        }
+    
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .card-insight {
+        align-items: flex-start;
+        display: flex;
+        flex: 0 1 80%;
+        flex-wrap: wrap;
+        column-gap: 1.4rem;
+        height: fit-content;
+        justify-content: flex-end;
+        margin: 1rem 0;
+        padding: $card-padding;
+        
+        > span {
+            font-size: 2.4rem;
+            height: fit-content;
+            padding: 0.8rem;
+        }
+    
+        .container {
+            align-items: flex-start;
+            display: flex;
+            flex: 1;
+            gap: 1.4rem;
+            height: fit-content;
+            justify-content: space-between;
+            padding-top: 1rem;
+
+            .info h3 {
+                margin-top: 0;
+            }
+    
+            .info h1 {
+                margin-bottom: 1rem;
+            }
+    
+            .graph {
+                height: 8.6rem;
+                width: 8.6rem;
+    
+                .circle {
+                    height: 8.6rem;
+                    width: 8.6rem;
+                }
+            }
+        }
+
+        small {
+            flex: 0 calc(100% - 5.4rem);
+            margin-top: -1.2rem;
+        }
+    
+        &:nth-child(2) {
+            .container .graph svg circle {
+                stroke-dasharray: -30;
+                stroke-dashoffset: 200;
+            }
+        }
+    
+        &:nth-child(3) {
+            .container .graph svg circle {
+                stroke-dasharray: 110;
+                stroke-dashoffset: 30;
+            }
+        }
+    
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .card-insight {
+        display: block;
+        flex: 1 0 20%;
+        height: fit-content;
+        margin: 1rem auto;
+        padding: $card-padding;
+        
+        > span {
+            font-size: 2.4rem;
+            padding: 0.8rem;
+        }
+    
+        .container {
+            gap: 1.4rem;
+    
+            .info h1 {
+                margin-bottom: 1rem;
+            }
+    
+            .graph {
+                height: 9.2rem;
+                width: 9.2rem;
+    
+                .circle {
+                    height: 8.6rem;
+                    width: 8.6rem;
+                }
+            }
+        }
+    
+        &:nth-child(2) {
+            .container .graph svg circle {
+                stroke-dasharray: -30;
+                stroke-dashoffset: 200;
+            }
+        }
+    
+        &:nth-child(3) {
+            .container .graph svg circle {
+                stroke-dasharray: 110;
+                stroke-dashoffset: 30;
+            }
+        }
+    
+    }
+}

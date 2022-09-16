@@ -1,0 +1,71 @@
+/*
+|--------------------------------------------------
+| Designer's Image Admin Components -- Images
+|--------------------------------------------------
+*/
+
+#creme-logo {
+    height: 2.5rem;
+
+    .logo {
+        fill: var(--color-primary);
+    }
+}
+
+.profile-photo {
+    border-radius: 50%;
+    height: 3rem;
+    overflow: hidden;
+    width: 3rem;
+}
+
+.account > .profile > .photo {
+    border-radius: 50%;
+    height: 3rem;
+    overflow: hidden;
+    width: 3rem;
+}
+
+@media screen and (min-width: 360px) {
+    #creme-logo {
+        height: 3rem;
+    }
+
+    .account > .profile > .photo {
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #creme-logo {
+        height: 4.8rem;
+    }
+
+    .account > .profile > .photo {
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #creme-logo {
+        height: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #creme-logo {
+        height: 2.5rem;
+    }
+    
+    .profile-photo {
+        height: 3rem;
+        width: 3rem;
+    }
+    
+    .account > .profile > .photo {
+        height: 3rem;
+        width: 3rem;
+    }
+}

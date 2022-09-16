@@ -1,0 +1,65 @@
+/*
+|--------------------------------------------------
+| Designer's Image Admin Main Styles
+|--------------------------------------------------
+*/
+
+/*
+|– utils/
+|   |– _variables.scss    // Sass Variables
+|   |– _functions.scss    // Sass Functions
+|   |– _mixins.scss       // Sass Mixins
+*/
+@import './admin/utils/variables';
+@import './admin/utils/functions';
+@import './admin/utils/mixins';
+
+/*
+|– base/
+|   |– _reset.scss        // Reset/normalize
+|   |– _typography.scss   // Typography rules
+*/
+@import './admin/base/reset';
+@import './admin/base/typography';
+
+/*
+|– components/
+|   |– _buttons.scss      // Buttons
+|   |– _cards.scss        // Card
+|   |– _graphs.scss       // Graphs
+|   |– _images.scss       // Images
+|   |– _links.scss        // Links
+*/
+@import './admin/components/buttons';
+@import './admin/components/cards';
+@import './admin/components/graphs';
+@import './admin/components/images';
+@import './admin/components/links';
+
+/*
+|– layout/
+|   |– _navigation.scss   // Navigation
+|   |– _grid.scss         // Grid system
+|   |– _header.scss       // Header
+|   |– _footer.scss       // Footer
+|   |– _main.scss         // Main
+|   |– _sidebar.scss      // Sidebar
+|   |– _forms.scss        // Forms
+*/
+@import './admin/layout/navigation';
+@import './admin/layout/grid';
+@import './admin/layout/header';
+@import './admin/layout/footer';
+@import './admin/layout/main';
+@import './admin/layout/sidebar';
+@import './admin/layout/forms';
+
+/*
+|– pages/
+|   |– _dashboard.scss    // Dashboard specific styles
+|   |– _products.scss     // Products specific styles
+|   |– _users.scss        // Users specific styles
+*/
+@import './admin/pages/dashboard';
+@import './admin/pages/products';
+@import './admin/pages/users';

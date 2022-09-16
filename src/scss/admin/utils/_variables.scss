@@ -1,0 +1,54 @@
+/*
+|--------------------------------------------------
+| Designer's Image Admin Utilities -- Variables
+|--------------------------------------------------
+*/
+
+:root {
+    //** Primary Colors **//
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-primary-variant: #111e88;
+
+    // ********** LIGHT THEME ********** //
+    --color-background: #f3f3f3;
+    --color-white: white;
+    --color-info-light: #dce1eb;
+    --color-light: rgb(233, 235, 255);
+    --color-light-opaque: var(--color-light);
+    --color-light-variant: #a3bdcc;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-dark-variant: #677483;
+}
+
+
+// ********** DARK THEME ********** //
+.dark-theme {
+    --color-primary-variant: #dce1eb;
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-info-light: #dce1eb;
+    --color-light: rgb(132, 139, 200);
+    --color-light-opaque: rgba(0,0,0,0.4);
+    --color-light-variant: #677483;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+}
+
+
+//** Box Shadow **//
+$box-shadow: 0 1rem 2rem var(--color-light-opaque);
+
+//** Border Radius **//
+$card-border-radius: 2rem;
+$border-radius-1: 0.6rem;
+$border-radius-2: 1.0rem;
+$border-radius-3: 1.4rem;
+
+//** Padding **//
+$card-padding: 1.8rem;
+$padding-1: 1.2rem;
+$padding-2: 1.4rem;

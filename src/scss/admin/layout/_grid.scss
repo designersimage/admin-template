@@ -1,0 +1,196 @@
+/*
+|--------------------------------------------------
+| Designer's Image Admin Layout -- Grid
+|--------------------------------------------------
+*/
+
+.admin-header {
+    grid-area: header;
+}
+.admin-nav {
+    grid-area: nav;
+}
+.admin-title {
+    grid-area: title;
+}
+.admin-insights {
+    grid-area: insights;
+}
+.recent-orders {
+    grid-area: orders;
+}
+.admin-sidebar {
+    grid-area: sidebar;
+}
+.admin-footer {
+    grid-area: footer;
+}
+
+// .wrapper {
+//     align-content: stretch;
+//     display: grid;
+//     grid-template-rows: 6.3rem auto auto auto 5rem;
+//     grid-template-areas:
+//     "header"
+//     "nav"
+//     "content"
+//     "sidebar"
+//     "footer";
+// }
+
+// @media (min-width: 500px) {
+//     .wrapper {
+//         grid-template-columns: 20rem 1fr;
+//         grid-template-rows: 6.3rem auto auto 5rem;
+//         grid-template-areas:
+//         "header  header"
+//         "nav     content"
+//         "nav     sidebar"
+//         "footer  footer";
+//     }
+// }
+
+// @media (min-width: 1024px) {
+//     .wrapper {
+//         grid-template-columns: 22rem 3.5fr 1.5fr;
+//         grid-template-rows: 6.3rem auto 5rem;
+//         grid-template-areas:
+//             "header header  header"
+//             "nav    content sidebar"
+//             "footer footer  footer";
+//     }
+// }
+
+.wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
+
+    main.admin-main {
+        align-content: stretch;
+        box-sizing: border-box;
+        display: grid;
+        flex: 0 calc(100% - 3.5rem);
+        gap: 2.8rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto 5rem;
+        grid-template-areas:
+            "title"
+            "insights"
+            "sidebar"
+            "orders"
+            "footer";
+        height: calc(100vh - 5rem);
+        margin-right: -8px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            right: -5px;
+            width: 5px;
+        }
+            
+        &::-webkit-scrollbar-track {
+            background-color: var(--color-background);
+            border-radius: 10px;
+        }
+            
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--color-primary);
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .wrapper {
+        main.admin-main {
+            flex: 0 calc(100% - 4.2rem);
+            height: calc(100vh - 6.3rem);
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        main.admin-main {
+            gap: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto 1fr 7rem;
+            grid-template-areas:
+                "title       title"
+                "insights    sidebar"
+                "orders      orders"
+                "footer      footer";
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        main.admin-main {
+            flex: 0 calc(100% - 5.2rem);
+            gap: 3.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        justify-content: flex-start;
+        main.admin-main {
+            flex: 1;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto 1fr 5rem;
+            grid-template-areas:
+                "title       title"
+                "insights    sidebar"
+                "orders      orders"
+                "footer      footer";
+        }
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .wrapper {
+        main.admin-main {
+            height: calc(100vh - 5rem);
+            grid-template-columns: 3fr 1.75fr;
+            grid-template-rows: fit-content() auto auto 5rem;
+            grid-template-areas:
+                "title       title"
+                "insights    sidebar"
+                "orders      orders"
+                "footer      footer";
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .wrapper {
+        
+        main.admin-main {
+            gap: 2.8rem;
+            grid-template-columns: 3fr 1.25fr;
+            grid-template-rows: auto auto 1fr 5rem;
+            grid-template-areas:
+                "title       title"
+                "insights    sidebar"
+                "orders      sidebar"
+                "footer      footer";
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .wrapper {
+        main.admin-main {
+            gap: 3.6rem;
+        }
+    }
+}
