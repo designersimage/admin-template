@@ -3,7 +3,36 @@
 | Designer's Image Admin Pages -- Dashboard
 |--------------------------------------------------
 */
+.admin-title {
+    grid-area: title;
+}
+.admin-insights {
+    grid-area: insights;
+}
+.recent-orders {
+    grid-area: orders;
+}
+.admin-sidebar {
+    grid-area: sidebar;
+}
+.admin-footer {
+    grid-area: footer;
+}
 
+#dashboard {
+    align-content: stretch;
+    box-sizing: border-box;
+    display: grid;
+    flex: 0 calc(100% - 3.5rem);
+    gap: 2.8rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "title"
+        "insights"
+        "sidebar"
+        "orders";
+}
 
 .admin-title {
     align-items: flex-start;
@@ -300,6 +329,15 @@ aside.admin-sidebar {
 }
 
 @media screen and (min-width: 600px) {
+    #dashboard {
+        gap: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "title       title"
+            "insights    sidebar"
+            "orders      orders";
+    }
     .admin-title {
         margin: 2.8rem;
     }
@@ -309,6 +347,9 @@ aside.admin-sidebar {
 }
 
 @media screen and (min-width: 768px) {
+    #dashboard {
+        gap: 3.6rem;
+    }
     .admin-title {
         margin: 2.8rem 0 0 2.8rem;
     }
@@ -357,6 +398,15 @@ aside.admin-sidebar {
 }
 
 @media screen and (min-width: 1024px) {
+    #dashboard {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "title       title"
+            "insights    sidebar"
+            "orders      orders";
+    }
+
     .admin-title {
         margin: 4.2rem 0 0 4.2rem;
     }
@@ -384,7 +434,28 @@ aside.admin-sidebar {
     }
 }
 
+@media screen and (min-width: 1120px) {
+    #dashboard {
+        grid-template-columns: 3fr 1.75fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "title       title"
+            "insights    sidebar"
+            "orders      orders";
+    }
+}
+
 @media screen and (min-width: 1280px) {
+    #dashboard {
+        gap: 2.8rem;
+        grid-template-columns: 3fr 1.25fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "title       title"
+            "insights    sidebar"
+            "orders      sidebar";
+    }
+
     .admin-title {
         gap: 1.4rem;
         margin: 2.4rem 0 0 2.4rem;
@@ -420,6 +491,10 @@ aside.admin-sidebar {
 }
 
 @media screen and (min-width: 1600px) {
+    #dashboard {
+        gap: 3.6rem;
+    }
+
     .admin-title {
         gap: 2.4rem;
         margin: 3.6rem 0 0 3.6rem;

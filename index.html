@@ -95,197 +95,200 @@
             </section>
         </nav>
         <main class="admin-main">
-            <section class="admin-title">
-                <h1>Dashboard</h1>
-                <div class="date">
-                    <input type="date">
-                </div>
-            </section>
-                
-            <section class="admin-insights">
-                <!-------------------- SALES -------------------->
-                <div class="card-insight">
-                    <span class="material-icons">analytics</span>
-                    <div class="container">
-                        <div class="info">
-                            <h3>Total Sales</h3>
-                            <h1>$25,024</h1>
-                        </div>
-                        <div class="graph">
-                            <div class="circle"></div>
-                            <div class="number">81%</div>
-                        </div>
+            <div id="dashboard">
+                <section class="admin-title">
+                    <h1>Dashboard</h1>
+                    <div class="date">
+                        <input type="date">
                     </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                
-                <!------------------- EXPENSES ------------------>
-                <div class="card-insight">
-                    <span class="material-icons">bar_chart</span>
-                    <div class="container">
-                        <div class="info">
-                            <h3>Total Expenses</h3>
-                            <h1>$14,160</h1>
+                </section>
+                    
+                <section class="admin-insights">
+                    <!-------------------- SALES -------------------->
+                    <div class="card-insight">
+                        <span class="material-icons">analytics</span>
+                        <div class="container">
+                            <div class="info">
+                                <h3>Total Sales</h3>
+                                <h1>$25,024</h1>
+                            </div>
+                            <div class="graph">
+                                <div class="circle"></div>
+                                <div class="number">81%</div>
+                            </div>
                         </div>
-                        <div class="graph">
-                            <div class="circle"></div>
-                            <div class="number">62%</div>
-                        </div>
+                        <small class="text-muted">Last 24 Hours</small>
                     </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                
-                <!-------------------- INCOME ------------------->
-                <div class="card-insight">
-                    <span class="material-icons">stacked_line_chart</span>
-                    <div class="container">
-                        <div class="info">
-                            <h3>Total Income</h3>
-                            <h1>$10,864</h1>
+                    
+                    <!------------------- EXPENSES ------------------>
+                    <div class="card-insight">
+                        <span class="material-icons">bar_chart</span>
+                        <div class="container">
+                            <div class="info">
+                                <h3>Total Expenses</h3>
+                                <h1>$14,160</h1>
+                            </div>
+                            <div class="graph">
+                                <div class="circle"></div>
+                                <div class="number">62%</div>
+                            </div>
                         </div>
-                        <div class="graph">
-                            <div class="circle"></div>
-                            <div class="number">44%</div>
-                        </div>
+                        <small class="text-muted">Last 24 Hours</small>
                     </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
+                    
+                    <!-------------------- INCOME ------------------->
+                    <div class="card-insight">
+                        <span class="material-icons">stacked_line_chart</span>
+                        <div class="container">
+                            <div class="info">
+                                <h3>Total Income</h3>
+                                <h1>$10,864</h1>
+                            </div>
+                            <div class="graph">
+                                <div class="circle"></div>
+                                <div class="number">44%</div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    
+                </section>
                 
-            </section>
+                <!-------------------- RECENT ORDERS ------------------->
+                <section class="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Order Number</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jeff Smith</td>
+                                <td>85631</td>
+                                <td>Due</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Jeff Smith</td>
+                                <td>85631</td>
+                                <td>Due</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Jeff Smith</td>
+                                <td>85631</td>
+                                <td>Due</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Jeff Smith</td>
+                                <td>85631</td>
+                                <td>Due</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Jeff Smith</td>
+                                <td>85631</td>
+                                <td>Due</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                </section>
+        
+                <aside class="admin-sidebar">
+                    <!-------------------- RECENT UPDATES ------------------->
+                    <section class="recent-updates">
+                        <h2>Recent Updates</h2>
+                        <ul class="updates">
+                            <li class="update">
+                                <div class="profile-photo">
+                                    <img src="./assets/images/profile_2.jpg">
+                                </div>
+                                <div class="message">
+                                    <p><strong>Jonathan Wheeler</strong> received his order.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </li>
+                            <li class="update">
+                                <div class="profile-photo">
+                                    <img src="./assets/images/profile_2.jpg">
+                                </div>
+                                <div class="message">
+                                    <p><strong>Jonathan Wheeler</strong> received his order.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </li>
+                            <li class="update">
+                                <div class="profile-photo">
+                                    <img src="./assets/images/profile_2.jpg">
+                                </div>
+                                <div class="message">
+                                    <p><strong>Jonathan Wheeler</strong> received his order.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+        
+                    <!-------------------- SALES ANALYTICS ------------------->
+                    <section class="sales-analytics">
+                        <h2>Sales Analytics</h2>
+                        <div class="item online">
+                            <span class="material-icons">shopping_cart</span>
+                            <div class="container">
+                                <div class="info">
+                                    <h4>Online Orders</h4>
+                                    <small class="text-muted">Last 24 Hours</small>
+                                </div>
+                                <div class="value">
+                                    <h4>$3849</h4>
+                                    <h5 class="success">+39%</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item offline">
+                            <span class="material-icons">local_mall</span>
+                            <div class="container">
+                                <div class="info">
+                                    <h4>Offline Orders</h4>
+                                    <small class="text-muted">Last 24 Hours</small>
+                                </div>
+                                <div class="value">
+                                    <h4>$1100</h4>
+                                    <h5 class="danger">-17%</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item customers">
+                            <span class="material-icons">person</span>
+                            <div class="container">
+                                <div class="info">
+                                    <h4>New Customers</h4>
+                                    <small class="text-muted">Last 24 Hours</small>
+                                </div>
+                                <div class="value">
+                                    <h4>849</h4>
+                                    <h5 class="success">+25%</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
             
-            <!-------------------- RECENT ORDERS ------------------->
-            <section class="recent-orders">
-                <h2>Recent Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Order Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jeff Smith</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Jeff Smith</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Jeff Smith</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Jeff Smith</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                        <tr>
-                            <td>Jeff Smith</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#">Show All</a>
-            </section>
-    
-            <aside class="admin-sidebar">
-                <!-------------------- RECENT UPDATES ------------------->
-                <section class="recent-updates">
-                    <h2>Recent Updates</h2>
-                    <ul class="updates">
-                        <li class="update">
-                            <div class="profile-photo">
-                                <img src="./assets/images/profile_2.jpg">
-                            </div>
-                            <div class="message">
-                                <p><strong>Jonathan Wheeler</strong> received his order.</p>
-                                <small class="text-muted">2 Minutes Ago</small>
-                            </div>
-                        </li>
-                        <li class="update">
-                            <div class="profile-photo">
-                                <img src="./assets/images/profile_2.jpg">
-                            </div>
-                            <div class="message">
-                                <p><strong>Jonathan Wheeler</strong> received his order.</p>
-                                <small class="text-muted">2 Minutes Ago</small>
-                            </div>
-                        </li>
-                        <li class="update">
-                            <div class="profile-photo">
-                                <img src="./assets/images/profile_2.jpg">
-                            </div>
-                            <div class="message">
-                                <p><strong>Jonathan Wheeler</strong> received his order.</p>
-                                <small class="text-muted">2 Minutes Ago</small>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-    
-                <!-------------------- SALES ANALYTICS ------------------->
-                <section class="sales-analytics">
-                    <h2>Sales Analytics</h2>
-                    <div class="item online">
-                        <span class="material-icons">shopping_cart</span>
-                        <div class="container">
-                            <div class="info">
-                                <h4>Online Orders</h4>
-                                <small class="text-muted">Last 24 Hours</small>
-                            </div>
-                            <div class="value">
-                                <h4>$3849</h4>
-                                <h5 class="success">+39%</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item offline">
-                        <span class="material-icons">local_mall</span>
-                        <div class="container">
-                            <div class="info">
-                                <h4>Offline Orders</h4>
-                                <small class="text-muted">Last 24 Hours</small>
-                            </div>
-                            <div class="value">
-                                <h4>$1100</h4>
-                                <h5 class="danger">-17%</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item customers">
-                        <span class="material-icons">person</span>
-                        <div class="container">
-                            <div class="info">
-                                <h4>New Customers</h4>
-                                <small class="text-muted">Last 24 Hours</small>
-                            </div>
-                            <div class="value">
-                                <h4>849</h4>
-                                <h5 class="success">+25%</h5>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </aside>
             <footer class="admin-footer"></footer>
         </main>
         
